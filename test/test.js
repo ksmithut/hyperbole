@@ -48,7 +48,7 @@ describe('hyperbole', function () {
         throw new Error('ECONNREFUSED should have happened');
       })
       .catch(function (err) {
-        expect(err.message).to.be.equal('connect ECONNREFUSED');
+        expect(err.message).to.contain('connect ECONNREFUSED');
       });
   });
 
