@@ -37,7 +37,8 @@ Server.prototype.stop = function stop() {
     if (!Server.isServer(this)) {
       return reject(new Error('Context was lost when calling server.stop'));
     }
-    this.server.close(function () {
+    this.server.close(function (err) {
+      if (err) { return reject(err); }
       this.server.removeAllListeners('listening');
       this.server.removeAllListeners('error');
       resolve();
