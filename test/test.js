@@ -38,9 +38,7 @@ describe('hyperbole', function () {
           .expect(200)
           .expect('home');
       })
-      .then(function () {
-        return server.stop();
-      })
+      .then(server.stop)
       .then(function () {
         return request.get('/');
       })
@@ -60,9 +58,7 @@ describe('hyperbole', function () {
           .expect(200)
           .expect('home');
       })
-      .then(function () {
-        return server.stop();
-      });
+      .then(server.stop);
   });
 
   it('should use it as a function (without new)', function () {
@@ -73,9 +69,7 @@ describe('hyperbole', function () {
           .expect(200)
           .expect('home');
       })
-      .then(function () {
-        return server.stop();
-      });
+      .then(server.stop);
   });
 
   it('should fail if .stop() is called when server is not up', function () {
@@ -106,32 +100,25 @@ describe('hyperbole', function () {
           .expect(200)
           .expect('home');
       })
-      .then(function () {
-        return http.stop();
-      })
-      .then(function () {
-        return https.stop();
-      });
+      .then(http.stop)
+      .then(https.stop);
   });
 
-  it('should throw error if context was lost', function () {
+  it('should still start server without context', function () {
     var server = new Server(app, port);
     return Promise.resolve()
       .then(server.start)
       .then(function () {
-        throw new Error('should have failed');
-      })
-      .catch(function (err) {
-        expect(err.message).to.be
-          .equal('Context was lost when calling server.start');
+        return request.get('/')
+          .expect(200)
+          .expect('home');
       })
       .then(server.stop)
       .then(function () {
-        throw new Error('should have failed');
+        return request.get('/');
       })
       .catch(function (err) {
-        expect(err.message).to.be
-          .equal('Context was lost when calling server.stop');
+        expect(err.message).to.contain('connect ECONNREFUSED');
       });
   });
 
