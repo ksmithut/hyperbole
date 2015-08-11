@@ -1,6 +1,6 @@
 {
   "name": "hyperbole",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A promise based wrapper around http/https",
   "main": "index.js",
   "scripts": {
