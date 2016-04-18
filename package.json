@@ -30,18 +30,18 @@
   },
   "homepage": "https://github.com/ksmithut/hyperbole",
   "devDependencies": {
-    "chai": "^3.2.0",
-    "codeclimate-test-reporter": "^0.1.0",
-    "express": "^4.13.3",
-    "istanbul": "^0.3.17",
-    "jshint": "^2.8.0",
-    "jshint-stylish": "^2.0.1",
-    "mocha": "^2.2.5",
-    "mocha-lcov-reporter": "0.0.2",
-    "supertest": "^1.0.1",
-    "supertest-as-promised": "^2.0.2"
+    "chai": "^3.5.0",
+    "codeclimate-test-reporter": "^0.3.1",
+    "express": "^4.13.4",
+    "istanbul": "^0.4.3",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.2.0",
+    "supertest": "^1.2.0",
+    "supertest-as-promised": "^3.1.0"
   },
   "dependencies": {
-    "bluebird": "^2.9.34"
+    "bluebird": "^3.3.5"
   }
 }

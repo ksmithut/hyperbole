@@ -1,8 +1,5 @@
 # hyperbole
 
-[![io.js compatibility](https://img.shields.io/badge/io.js-compatible-brightgreen.svg?style=flat)](https://iojs.org/)
-[![node.js compatibility](https://img.shields.io/badge/node.js-compatible-brightgreen.svg?style=flat)](https://nodejs.org/)
-
 [![NPM version](http://img.shields.io/npm/v/hyperbole.svg?style=flat)](https://www.npmjs.org/package/hyperbole)
 [![Dependency Status](http://img.shields.io/david/ksmithut/hyperbole.svg?style=flat)](https://david-dm.org/ksmithut/hyperbole)
 [![Dev Dependency Status](http://img.shields.io/david/dev/ksmithut/hyperbole.svg?style=flat)](https://david-dm.org/ksmithut/hyperbole#info=devDependencies&view=table)
